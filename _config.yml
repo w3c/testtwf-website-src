@@ -42,17 +42,17 @@ docs:
       - github-101.html
       - submission-process.html
   - icons: notes_2
-    title: Start writing tests
+    title: Javascript Tests
     type: jstest
-    body: "Learn how to [write JavaScript tests](/docs/testharness-tutorial.html)
-          using W3C's test framework."
+    body: "Write [JavaScript tests](/docs/testharness.html) using W3C's
+           `testharness.js` test framework."
     links:
-      - testharness-tutorial.html
+      - testharness.html
       - test-format-guidelines.html
       - test-style-guidelines.html
       - test-templates.html
   - icons: picture
-    title: Create reftests
+    title: Reftests
     type: reftest
     body: "[Build reftests](/docs/reftests.html) to tests browsers' rendering
           engines."
@@ -62,10 +62,17 @@ docs:
       - test-style-guidelines.html
       - test-templates.html
   - icons: search
+    title: Manual Tests
+    type: manualtest
+    body: "Write tests that require manual interaction"
+    links:
+      - test-format-guidelines.html
+      - test-style-guidelines.html
+      - test-templates.html
+  - icons: search
     title: Review tests
     type: review
-    body: "Learn how to [review tests](/docs/review-process.html) and positively impact
-          Test the Web Forward's biggest bottleneck: the pull request queue."
+    body: "Learn how to [review tests](/docs/review-process.html)"
     links:
       - review-process.html
       - review-checklist.html
