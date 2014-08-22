@@ -1,0 +1,16 @@
+language: ruby
+
+install:
+  # Install Jekyll and dependencies
+  - bundle install
+
+script: bundle exec rake site:deploy
+
+env:
+  global:
+    secure: "ZUU/h/4aBOkMhQTeTFIJBI7f6HViiS8sJroIUPtLkCCoDpzZUlirKztdS+IP+5Nc75S0Cn25Bwh942LY3unExvsBbHNLbDn1s5ZVkNEanAoiPhTrOFONGe88R4IhAsRvYFP+F55GYygKdceBNABQPaHJt2pRfjYcvHov0GJwdYE="
+
+# Generate your secure token with the travis gem:
+# get Github token from your Travis CI profile page
+# gem install travis
+# travis encrypt 'GIT_NAME="YOUR_USERNAME" GIT_EMAIL="YOUR_EMAIL" GH_TOKEN=YOUR_TOKEN'
