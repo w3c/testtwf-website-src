@@ -30,25 +30,28 @@
 
 body {
   background-color: #e7ebf1;
-  color: #67727E;
-  font-family: "Adelle", georgia, serif;
+  color: #333;
+  font-family: "Open Sans", "DejaVu Sans", "Adelle", georgia, serif;
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 code {
   word-break: break-word;
   word-wrap: break-word;
+  font-family:Monaco,Menlo,Consolas,"Open Sans Mono", "DejaVu Sans Mono","Courier New",monospace
 }
 
 h1, h2, h3 {
   font-family: GoudyBookletter1911Regular, "ChunkFive", georgia, serif;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+  color:#67727E;
 }
 
 .navbar-default .navbar-brand {
   color: #333;
   font-size: 16px;
+  font-family: "Adelle", georgia, serif;
 }
 
 h4, h5, h6 {
@@ -265,36 +268,36 @@ hr.page-break:before {
 }
 
 hr {
-	border-top-color:#ccc;
-	margin: 60px 5%;
+  border-top-color:#ccc;
+  margin: 60px 5%;
 }
 
 hr.section {
-	border-top-color: #ccc;
-	margin: 15px 5%;
+  border-top-color: #ccc;
+  margin: 15px 5%;
 }
 
 :not(body.index) *[role=main] h2 {
-	margin-top: 60px;
+  margin-top: 60px;
 }
 
 body.index *[role=main] article {
-	margin-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 *[role=main] .jumbotron h2 {
-	padding-bottom:0;
-	margin:0;
-	border-bottom: none;
+  padding-bottom:0;
+  margin:0;
+  border-bottom: none;
 }
 
 .well p:last-child {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 div[role=complementary] {
-	padding-top: 69px;
+  padding-top: 69px;
 }
 
 .metadata .date,
@@ -302,14 +305,14 @@ div[role=complementary] {
 }
 
 .highlight .metadata {
-	font-size: 80%;
+  font-size: 80%;
 }
 
 .panel-group .panel+#docs-toc{margin-top:5px}
 
 .featurette .row+.row {
-	margin-top: 45px;
+  margin-top: 45px;
 }
 .featurette {
-	margin: 45px 0;
+  margin: 45px 0;
 }
