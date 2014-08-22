@@ -21,7 +21,7 @@ if REPO == "#{USERNAME}.github.io"
   SOURCE_BRANCH = CONFIG['branch'] || "source"
   DESTINATION_BRANCH = "master"
 else
-   SOURCE_BRANCH = "docs_submodule"
+   SOURCE_BRANCH = "jgraham/docs_submodule"
 #  SOURCE_BRANCH = "master"
   DESTINATION_BRANCH = "gh-pages"
 end
