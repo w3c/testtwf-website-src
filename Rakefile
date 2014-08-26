@@ -29,8 +29,6 @@ ENV["USERNAME"] = USERNAME
 ENV["REPO"] = REPO
 ENV["DESTINATION"] = CONFIG['destination']
 
-sh "echo \"Secure variables avaliable $TRAVIS_SECURE_ENV_VARS\""
-
 #############################################################################
 #
 # Helper functions
@@ -38,6 +36,12 @@ sh "echo \"Secure variables avaliable $TRAVIS_SECURE_ENV_VARS\""
 #############################################################################
 
 def check_destination
+  unless Dir.exist? CONFIG["destination"]
+    Dir.mkdir CONFIG["destination"]
+  end
+end
+
+def checkout_destination
   unless Dir.exist? CONFIG["destination"]
       sh "./clone.sh"
   end
@@ -77,13 +81,17 @@ namespace :site do
 
     # Configure git if this is run in Travis CI
     if ENV["TRAVIS"]
+      if ENV['TRAVIS_SECURE_ENV_VARS'] == "false"
+        puts 'Not able to access secure variables'
+        exit
+      end
       sh "git config --global user.name '#{ENV['GIT_NAME']}'"
       sh "git config --global user.email '#{ENV['GIT_EMAIL']}'"
       sh "git config --global push.default simple"
     end
 
     # Make sure destination folder exists as git repo
-    check_destination
+    checkout_destination
 
     sh "git checkout #{SOURCE_BRANCH}"
     Dir.chdir(CONFIG["destination"]) {
