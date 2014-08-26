@@ -1,6 +1,4 @@
 exclude: [RESOURCES.md, CONTRIBUTING.md, README.md]
-username: "jgraham"
-repo: "testtwf-website"
 name: "Test the Web Forward"
 destination: "_site"
 url: "http://testthewebforward.com"
