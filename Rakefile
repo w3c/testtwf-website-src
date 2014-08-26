@@ -29,6 +29,8 @@ ENV["USERNAME"] = USERNAME
 ENV["REPO"] = REPO
 ENV["DESTINATION"] = CONFIG['destination']
 
+sh "echo \"Secure variables avaliable $TRAVIS_SECURE_ENV_VARS\""
+
 #############################################################################
 #
 # Helper functions
