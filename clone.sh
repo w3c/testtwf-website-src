@@ -6,8 +6,11 @@ echo $DESTINATION
 echo $DESTINATION_BRANCH
 echo https://$GIT_NAME@github.com/$USERNAME/$REPO.git
 git clone https://$GIT_NAME:$GH_TOKEN@github.com/$USERNAME/$REPO.git $DESTINATION &> /dev/null
+ls $DESTINATION
 cd $DESTINATION
-ls
+git branch
 git checkout $DESTINATION_BRANCH
-echo `git rev-parse HEAD`
+git rev-parse master
+git rev-parse origin/master
+git rev-parse HEAD
 echo "Clone succeeded"
