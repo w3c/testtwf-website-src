@@ -77,7 +77,7 @@ namespace :site do
       end
       sh "git config --global user.name '#{ENV['GIT_NAME']}'"
       sh "git config --global user.email '#{ENV['GIT_EMAIL']}'"
-      sh "git config --global push.default simple"
+      sh "git config --global push.default tracking"
     end
 
     sh "git submodule update --init"
