@@ -18,7 +18,8 @@ DESTINATION_BRANCH = "master"
 
 ENV["USERNAME"] = USERNAME
 ENV["REPO"] = REPO
-ENV["DESTINATION"] = CONFIG['destination']
+ENV["DESTINATION"] = DESTINATION
+ENV["DESTINATION_BRANCH"] = DESTINATION_BRANCH
 
 #############################################################################
 #
@@ -29,12 +30,6 @@ ENV["DESTINATION"] = CONFIG['destination']
 def check_destination
   unless Dir.exist? DESTINATION
     Dir.mkdir DESTINATION
-  end
-end
-
-def checkout_destination
-  unless Dir.exist? DESTINATION
-      sh "./clone.sh"
   end
 end
 
@@ -86,25 +81,14 @@ namespace :site do
     end
 
     sh "git submodule update --init"
-
-    # Make sure destination folder exists as git repo
-    checkout_destination
-
     sh "git checkout #{SOURCE_BRANCH}"
-    Dir.chdir(DESTINATION) {
-      sh "git checkout -B #{DESTINATION_BRANCH}"
-    }
+
+    sh "./clone.sh"
 
     # Generate the site
     sh "bundle exec jekyll build"
 
     # Commit and push to github
-    sha = `git log`.match(/[a-z0-9]{40}/)[0]
-    Dir.chdir(DESTINATION) do
-      sh "git add --all ."
-      sh "git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.'"
-      sh "git push origin #{DESTINATION_BRANCH}"
-      puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
-    end
+    sh "./deploy.sh"
   end
 end
