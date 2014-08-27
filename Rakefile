@@ -83,6 +83,8 @@ namespace :site do
     sh "git submodule update --init"
     sh "git checkout #{SOURCE_BRANCH}"
 
+    check_destination
+
     sh "./clone.sh"
 
     # Generate the site
