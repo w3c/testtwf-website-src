@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
+
 echo $PWD
 SHA=`git rev-parse HEAD`
 cd $DESTINATION
