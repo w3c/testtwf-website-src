@@ -316,3 +316,7 @@ div[role=complementary] {
 .featurette {
   margin: 45px 0;
 }
+
+.glyphicon:hover {
+  text-decoration:none;
+}

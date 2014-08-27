@@ -38,6 +38,7 @@ docs:
   - icons: git_pull_request
     title: Getting started
     type: 101
+    icon_link: /docs/github-101.html
     body: "Set up your environment and learn how to
           [use Git and GitHub](/docs/github-101.html) to contribute."
     links:
@@ -46,6 +47,7 @@ docs:
   - icons: notes_2
     title: Javascript Tests
     type: jstest
+    icon_link: /docs/testharness.html
     body: "Write [JavaScript tests](/docs/testharness.html) using W3C's
            `testharness.js` test framework."
     links:
@@ -56,6 +58,7 @@ docs:
   - icons: picture
     title: Reftests
     type: reftest
+    icon_link: /docs/reftests.html
     body: "[Build reftests](/docs/reftests.html) to tests browsers' rendering
           engines."
     links:
@@ -67,6 +70,7 @@ docs:
     title: Manual Tests
     type: manualtest
     body: "Write tests that require manual interaction"
+    icon_link: /
     links:
       - test-format-guidelines.html
       - test-style-guidelines.html
@@ -74,6 +78,7 @@ docs:
   - icons: search
     title: Review tests
     type: review
+    icon_link: /docs/review-process.html
     body: "Learn how to [review tests](/docs/review-process.html)"
     links:
       - review-process.html
@@ -81,6 +86,7 @@ docs:
   - icons: cloud-download
     title: Migrate to GitHub
     type: migration
+    icon_link: /docs/migration-process.html
     body: "Easily [migrate](/docs/migration-process.html) your test suite to the
           main repository."
     links:
@@ -89,6 +95,7 @@ docs:
   - icons: bug
     title: Hunt bugs
     type: bugs
+    icon_link: /docs/bugs.html
     body: "Whether you've identified a spec bug (these happen) or a browser issue,
           [we have you covered](/docs/bugs.html)."
     links:
@@ -96,6 +103,7 @@ docs:
   - icons: circle_question_mark
     title: Unanswered questions?
     type: reference
+    icon_link: /docs/faq.html
     body: "Check our [FAQ](/docs/faq.html) and [glossary](/docs/glossary.html)."
     links:
       - faq.html

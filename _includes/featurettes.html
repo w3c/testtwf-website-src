@@ -8,8 +8,8 @@
       <div class="row">
     {% endif %}
         <div class="col-md-{{ col }}">
-          {% include icons.html icons=featurette.icons size="L" type="primary" %}
-          <h3>{{ featurette.title | escape }}</h3>
+          {% include icons.html icons=featurette.icons icon_link=featurette.icon_link size="L" type="primary" %}
+          <h3>{{ featurette.title | escape }}</a></h3>
           {{ featurette.body | markdownify }}
         </div>
     {% if mod == 0 or forloop.last %}
