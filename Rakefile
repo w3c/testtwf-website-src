@@ -6,24 +6,15 @@
 #############################################################################
 
 require 'rake'
-require 'date'
 require 'yaml'
 
 CONFIG = YAML.load(File.read('_config.yml'))
 USERNAME = CONFIG["username"] || ENV['GIT_NAME']
-REPO = CONFIG["repo"] || "#{USERNAME}.github.io"
+REPO = CONFIG["repo"]
+DESTINATION = CONFIG['destination']
 
-# Determine source and destination branch
-# User or organization: source -> master
-# Project: master -> gh-pages
-# Name of source branch for user/organization defaults to "source"
-if REPO == "#{USERNAME}.github.io"
-  SOURCE_BRANCH = CONFIG['branch'] || "source"
-  DESTINATION_BRANCH = "master"
-else
-  SOURCE_BRANCH = "master"
-  DESTINATION_BRANCH = "gh-pages"
-end
+SOURCE_BRANCH = "master"
+DESTINATION_BRANCH = "master"
 
 ENV["USERNAME"] = USERNAME
 ENV["REPO"] = REPO
@@ -36,13 +27,13 @@ ENV["DESTINATION"] = CONFIG['destination']
 #############################################################################
 
 def check_destination
-  unless Dir.exist? CONFIG["destination"]
-    Dir.mkdir CONFIG["destination"]
+  unless Dir.exist? DESTINATION
+    Dir.mkdir DESTINATION
   end
 end
 
 def checkout_destination
-  unless Dir.exist? CONFIG["destination"]
+  unless Dir.exist? DESTINATION
       sh "./clone.sh"
   end
 end
@@ -94,7 +85,7 @@ namespace :site do
     checkout_destination
 
     sh "git checkout #{SOURCE_BRANCH}"
-    Dir.chdir(CONFIG["destination"]) {
+    Dir.chdir(DESTINATION) {
       sh "git checkout -B #{DESTINATION_BRANCH}"
     }
 
@@ -103,7 +94,7 @@ namespace :site do
 
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
-    Dir.chdir(CONFIG["destination"]) do
+    Dir.chdir(DESTINATION) do
       sh "git add --all ."
       sh "git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.'"
       sh "git push origin #{DESTINATION_BRANCH}"
