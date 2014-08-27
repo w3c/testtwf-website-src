@@ -48,17 +48,21 @@ namespace :site do
   desc "Generate the site"
   task :build do
     check_destination
+    sh "git submodule update --init"
     sh "bundle exec jekyll build"
   end
 
   desc "Generate the site and serve locally"
   task :serve do
     check_destination
+    sh "git submodule update --init"
     sh "bundle exec jekyll serve"
   end
 
   desc "Generate the site, serve locally and watch for changes"
   task :watch do
+    check_destination
+    sh "git submodule update --init"
     sh "bundle exec jekyll serve --watch"
   end
 
@@ -80,6 +84,8 @@ namespace :site do
       sh "git config --global user.email '#{ENV['GIT_EMAIL']}'"
       sh "git config --global push.default simple"
     end
+
+    sh "git submodule update --init"
 
     # Make sure destination folder exists as git repo
     checkout_destination
