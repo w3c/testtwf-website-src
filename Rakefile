@@ -27,10 +27,19 @@ ENV["DESTINATION_BRANCH"] = DESTINATION_BRANCH
 #
 #############################################################################
 
+
 def check_destination
   unless Dir.exist? DESTINATION
     Dir.mkdir DESTINATION
   end
+end
+
+def init_submodules
+  sh "git submodule update --init"
+end
+
+def jekyll command
+  sh "bundle exec jekyll #{command}"
 end
 
 #############################################################################
@@ -39,26 +48,23 @@ end
 #
 #############################################################################
 
+init_submodules
+check_destination
+
 namespace :site do
   desc "Generate the site"
   task :build do
-    check_destination
-    sh "git submodule update --init"
-    sh "bundle exec jekyll build"
+    jekyll "build"
   end
 
   desc "Generate the site and serve locally"
   task :serve do
-    check_destination
-    sh "git submodule update --init"
-    sh "bundle exec jekyll serve"
+    jekyll "serve"
   end
 
   desc "Generate the site, serve locally and watch for changes"
   task :watch do
-    check_destination
-    sh "git submodule update --init"
-    sh "bundle exec jekyll serve --watch"
+    jekyll "serve --watch"
   end
 
   desc "Generate the site and push changes to remote origin"
@@ -83,12 +89,10 @@ namespace :site do
     sh "git submodule update --init"
     sh "git checkout #{SOURCE_BRANCH}"
 
-    check_destination
-
     sh "./clone.sh"
 
     # Generate the site
-    sh "bundle exec jekyll build"
+    jekyll "build"
 
     # Commit and push to github
     sh "./deploy.sh"
