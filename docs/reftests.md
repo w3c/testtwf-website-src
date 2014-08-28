@@ -77,14 +77,6 @@ In general the second form is more expressive and so preferred. In
 particular it is more conducive to sharing the same reference amongst
 multiple files.
 
-Note: There is currently a discrepancy between the way that the
-web-platform-tests and the CSS tests treat multiple `<link>` elements
-in a single test file; the web-platform-tests regard these as multiple
-tests but the CSS testsuite regards these as multiple possible
-renderings for a single test. Until this mismatch is resolved it is
-recommended to avoid including multiple `<link>` elements in a single
-test.
-
 ## Controlling When Comparison Occurs
 
 By default reftest screenshots are taken in response to the `onload`
@@ -100,6 +92,32 @@ microtask checkpoint after the class is removed. Because the harness
 isn't synchronised with the browser event loop it is dangerous to rely
 on precise timing here).
 
+## Matching Multiple References
+
+Sometimes it is desirable for a file to match multiple references or,
+in rare cases, to allow it to match more than one possible
+reference. Note: *this is not currently supported by test runners and
+so best avoided if possible until that support improves*.
+
+Multiple references linked from a single file are interpreted as
+multiple possible renderings for that file. `<link rel=[mis]match>`
+elements in a reference create further conditions that must be met in
+order for the test to pass. For example, consider a situation where
+a.html has `<link rel=match href=b.html>` and `<link rel=match
+href=c.html>`, b.html has `<link rel=match href=b1.html>` and c.html
+has `<link rel=mismatch href=c1.html>`. In this case, to pass we must
+either have a.html, b.html and b1.html all rendering identically, or
+a.html and c.html rendering identically, but c.html rendering
+differently from c1.html.
+
+## Fuzzy Matching
+
+In some situations a test may have subtle differences in rendering
+compared to the reference due to e.g. antialiasing. This may cause the
+test to pass on some platforms but fail on others. In this case some
+affordance for subtle discrepancies is desirable. However no mechanism
+to allow this has yet been standardised.
+
 ## Limitations
 
 In some cases, a test cannot be a reftest. For example, there is no
@@ -112,7 +130,7 @@ a block element, by constructing a reference using underlines on a
 
 ## Example Reftests
 
-These examples are all [self-describing][self-desc] tests as they
+These examples are all [self-describing][selfdesc] tests as they
 each have a simple statement on the page describing how it should
 render to pass the tests.
 
@@ -120,10 +138,8 @@ render to pass the tests.
 
 ### Test File
 
-This is a test for the first example above in
-[When to Write Reftests](#when-to-write). It is testing that a right-
-to-left rendering of **SAW** within a ```<bdo>``` element displays
-as **WAS**.
+This test verifies that a right- to-left rendering of **SAW** within a
+```<bdo>``` element displays as **WAS**.
 
 ([view page rendering][html-reftest-example])
 
@@ -162,7 +178,7 @@ except that the code behind it is different.
 [testharness]: ./testharness-documentation.html
 [format]: ./test-format-guidelines.html
 [style]: ./test-style-guidelines.html
-[selfdesc]: ./test-style-guidelines.html#self-describing
+[selfdesc]: ./test-style-guidelines.html#self-describing-tests
 [reference-links]: ./test-templates.html#reference-links
 [html-reftest-example]: ./html-reftest-example.html
 [html-reffile-example]: ./html-reffile-example.html
