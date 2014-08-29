@@ -68,7 +68,7 @@ developer, including:
 
 * Interpretation of the spec
 
-* Information on other implementations 
+* Information on other implementations
 
 ### Steps to Reproduce
 

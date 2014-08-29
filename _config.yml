@@ -36,7 +36,7 @@ open-source:
           specs."
 docs:
   - icons: git_pull_request
-    title: Getting started
+    title: Getting Started
     type: 101
     icon_link: /docs/github-101.html
     body: "Set up your environment and learn how to
@@ -66,15 +66,15 @@ docs:
       - test-format-guidelines.html
       - test-style-guidelines.html
       - test-templates.html
-  - icons: search
-    title: Manual Tests
-    type: manualtest
-    body: "Write tests that require manual interaction"
-    icon_link: /
-    links:
-      - test-format-guidelines.html
-      - test-style-guidelines.html
-      - test-templates.html
+  # - icons: search
+  #   title: Manual Tests
+  #   type: manualtest
+  #   body: "Write tests that require manual interaction"
+  #   icon_link: /
+  #   links:
+  #     - test-format-guidelines.html
+  #     - test-style-guidelines.html
+  #     - test-templates.html
   - icons: search
     title: Review tests
     type: review
@@ -83,15 +83,6 @@ docs:
     links:
       - review-process.html
       - review-checklist.html
-  - icons: cloud-download
-    title: Migrate to GitHub
-    type: migration
-    icon_link: /docs/migration-process.html
-    body: "Easily [migrate](/docs/migration-process.html) your test suite to the
-          main repository."
-    links:
-      - migration-process.html
-
   - icons: bug
     title: Hunt bugs
     type: bugs
