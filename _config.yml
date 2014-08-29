@@ -41,6 +41,13 @@ docs:
     icon_link: /docs/configuration.html
     body: "Set up your local environment for running web-platform-tests."
 
+  - icons: play
+    title: Running Tests
+    type: 101
+    icon_link: /docs/running_tests.html
+    body: "Run existing tests or tests you are authoring."
+    links:
+
   - icons: git_pull_request
     title: Submitting Tests
     type: 101
@@ -51,12 +58,11 @@ docs:
       - github-101.html
       - submission-process.html
 
-  - icons: play
-    title: Running Tests
+  - icons: pencil
+    title: Writing Tests
     type: 101
-    icon_link: /docs/running_tests.html
-    body: "Run existing tests or tests you are authoring."
-    links:
+    icon_link: /docs/test-format-guidelines.html
+    body: "General requirements for authoring tests"
 
   - icons: notes_2
     title: Javascript Tests
