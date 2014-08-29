@@ -2,7 +2,7 @@
 <html lang="en">
 {% include head.html %}
 <body data-spy="scroll" data-target="#toc-container" class="{{ page.section }} {{ page.type }}">
-  
+
   <div class="container">
     {% include nav.html %}
 
@@ -11,7 +11,7 @@
         <p><span class="glyphicon glyphicon-warning_sign"></span> The content of this page is outdated.</p>
       </div>
     {% endif %}
-    
+
     {% if page.fullwidth %}
       <div role="main">
         {{ content }}
@@ -37,7 +37,7 @@
               {% include sidebars/social.html %}
             {% endcase %}
             <br>
-            
+
           </div>
         </div>
       </div>
@@ -72,6 +72,7 @@
 
     active.trigger('activate')
   }
+  {% if page.section != 'docs' %}
     var ICONS = {
       schedule: "clock",
       schedules: "clock",
@@ -100,14 +101,17 @@
       attendees: "conversation",
       meetup_topics: "list"
     };
-    
+  {% else %}
+    var ICONS = {};
+  {% endif %}
+
     function getIcon(id) {
       id = id.split('-')[0];
       var icon = ICONS[id];
       if (!icon) return "";
       return "<span class=\"glyphicon glyphicon-" + icon + "\"></span> ";
     }
-    
+
     function getAnchor(id) {
       return " <small><a class=anchor href=\"#" + id + "\"><span class=\"glyphicon glyphicon-link\"></span></a></small>";
     }

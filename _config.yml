@@ -35,15 +35,29 @@ open-source:
           used to automatically generate tests from Web IDL snippets contained in
           specs."
 docs:
-  - icons: git_pull_request
+  - icons: settings
     title: Getting Started
     type: 101
+    icon_link: /docs/configuration.html
+    body: "Set up your local environment for running web-platform-tests."
+
+  - icons: git_pull_request
+    title: Submitting Tests
+    type: 101
     icon_link: /docs/github-101.html
-    body: "Set up your environment and learn how to
+    body: "Learn how to
           [use Git and GitHub](/docs/github-101.html) to contribute."
     links:
       - github-101.html
       - submission-process.html
+
+  - icons: play
+    title: Running Tests
+    type: 101
+    icon_link: /docs/running_tests.html
+    body: "Run existing tests or tests you are authoring."
+    links:
+
   - icons: notes_2
     title: Javascript Tests
     type: jstest
