@@ -51,50 +51,61 @@ end
 init_submodules
 check_destination
 
-namespace :site do
-  desc "Generate the site"
-  task :build do
-    jekyll "build"
+desc "Update submodules"
+task :submodule_update do
+  if `git diff --staged`.strip != ""
+    puts "staging area must be clean"
+    exit
   end
-
-  desc "Generate the site and serve locally"
-  task :serve do
-    jekyll "serve"
-  end
-
-  desc "Generate the site, serve locally and watch for changes"
-  task :watch do
-    jekyll "serve --watch"
-  end
-
-  desc "Generate the site and push changes to remote origin"
-  task :deploy do
-    # Detect pull request
-    if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
-      puts 'Pull request detected. Not proceeding with deploy.'
-      exit
-    end
-
-    # Configure git if this is run in Travis CI
-    if ENV["TRAVIS"]
-      if ENV['TRAVIS_SECURE_ENV_VARS'] == "false"
-        puts 'Not able to access secure variables'
-        exit
-      end
-      sh "git config --global user.name '#{ENV['GIT_NAME']}'"
-      sh "git config --global user.email '#{ENV['GIT_EMAIL']}'"
-      sh "git config --global push.default tracking"
-    end
-
-    sh "git submodule update --init"
-    sh "git checkout #{SOURCE_BRANCH}"
-
-    sh "./clone.sh"
-
-    # Generate the site
-    jekyll "build"
-
-    # Commit and push to github
-    sh "./deploy.sh"
+  sh "git submodule -q foreach 'git fetch -q && git checkout -q origin/master && cd $toplevel && git add $path'"
+  if `git diff --staged`.strip != ""
+    sh "git commit -m 'Update to latest submodules'"
   end
 end
+
+desc "Generate the site"
+task :build do
+  jekyll "build"
+end
+
+desc "Generate the site and serve locally"
+task :serve do
+  jekyll "serve"
+end
+
+desc "Generate the site, serve locally and watch for changes"
+task :watch do
+  jekyll "serve --watch"
+end
+
+desc "Generate the site and push changes to remote origin"
+task :deploy do
+  # Detect pull request
+  if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
+    puts 'Pull request detected. Not proceeding with deploy.'
+    exit
+  end
+
+  # Configure git if this is run in Travis CI
+  if ENV["TRAVIS"]
+    if ENV['TRAVIS_SECURE_ENV_VARS'] == "false"
+      puts 'Not able to access secure variables'
+      exit
+    end
+    sh "git config --global user.name '#{ENV['GIT_NAME']}'"
+    sh "git config --global user.email '#{ENV['GIT_EMAIL']}'"
+    sh "git config --global push.default tracking"
+  end
+
+  sh "git submodule update --init"
+  sh "git checkout #{SOURCE_BRANCH}"
+
+  sh "./clone.sh"
+
+  # Generate the site
+  jekyll "build"
+
+  # Commit and push to github
+  sh "./deploy.sh"
+end
+
