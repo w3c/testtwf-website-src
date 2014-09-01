@@ -39,13 +39,13 @@ docs:
     title: Getting Started
     type: 101
     icon_link: /docs/configuration.html
-    body: "Set up your local environment for running web-platform-tests."
+    body: "[Set up your local environment](/docs/configuration.html) for running tests."
 
   - icons: play
     title: Running Tests
     type: 101
     icon_link: /docs/running_tests.html
-    body: "Run existing tests or tests you are authoring."
+    body: "[Run existing tests](/docs/running_tests.html) or tests you are authoring."
     links:
 
   - icons: git_pull_request
@@ -62,14 +62,13 @@ docs:
     title: Writing Tests
     type: 101
     icon_link: /docs/test-format-guidelines.html
-    body: "General requirements for authoring tests"
+    body: "Introduction and requirements for [authoring tests](/docs/test-format-guidelines.html)."
 
   - icons: notes_2
     title: Javascript Tests
     type: jstest
     icon_link: /docs/testharness.html
-    body: "Write [JavaScript tests](/docs/testharness.html) using W3C's
-           `testharness.js` test framework."
+    body: "Write [script-based tests](/docs/testharness.html)"
     links:
       - testharness.html
       - test-format-guidelines.html
@@ -96,7 +95,7 @@ docs:
   #     - test-style-guidelines.html
   #     - test-templates.html
   - icons: search
-    title: Review tests
+    title: Review Tests
     type: review
     icon_link: /docs/review-process.html
     body: "Learn how to [review tests](/docs/review-process.html)"
@@ -104,11 +103,10 @@ docs:
       - review-process.html
       - review-checklist.html
   - icons: bug
-    title: Hunt bugs
+    title: Report Bugs
     type: bugs
     icon_link: /docs/bugs.html
-    body: "Whether you've identified a spec bug (these happen) or a browser issue,
-          [we have you covered](/docs/bugs.html)."
+    body: "Guide to writing useful [bug reports](/docs/bugs.html) for specs and browsers."
     links:
       - bugs.html
   - icons: circle_question_mark
