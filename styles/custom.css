@@ -317,6 +317,6 @@ div[role=complementary] {
   margin: 45px 0;
 }
 
-.glyphicon:hover {
+.glyphicon:link:hover {
     text-decoration:none;
 }
