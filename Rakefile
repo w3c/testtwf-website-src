@@ -48,11 +48,11 @@ end
 #
 #############################################################################
 
-init_submodules
 check_destination
 
 desc "Update submodules"
 task :submodule_update do
+  init_submodules
   if `git diff --staged`.strip != ""
     puts "staging area must be clean"
     exit
