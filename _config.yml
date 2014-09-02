@@ -91,15 +91,6 @@ docs:
     links:
       - bugs.html
 
-  - icons: circle_question_mark
-    title: Unanswered questions?
-    type: reference
-    icon_link: /docs/faq.html
-    body: "Check the [FAQ](/docs/faq.html) and [glossary](/docs/glossary.html)."
-    links:
-      - faq.html
-      - glossary.html
-
 events: [
   {
     "date": "August 3, 2014",
