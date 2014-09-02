@@ -19,6 +19,17 @@
     {% unless forloop.first or side_by_side %}
       <small class="glyphicon glyphicon-plus"></small>
     {% endunless %}
-    <a href="{{ include.icon_link }}" class="glyphicon glyphicon-{{ icon }}"></a>{% if icon == 'group' %}&nbsp;{% endif %}
+    {% if include.icon_link %}
+      <a href="{{ include.icon_link }}"
+    {% else %}
+      <span
+    {% endif %}
+      class="glyphicon glyphicon-{{ icon }}">
+    {% if include.icon_link %}
+      </a>
+    {% else %}
+      </span>
+    {% endif %}
+    {% if icon == 'group' %}&nbsp;{% endif %}
   {% endfor %}
 </div>
