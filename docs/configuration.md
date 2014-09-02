@@ -1,6 +1,6 @@
 ---
 layout: docs
-type: [101]
+type: [configuration]
 title: Getting Started
 
 ---

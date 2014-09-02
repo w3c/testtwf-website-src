@@ -1,6 +1,6 @@
 ---
 layout: docs
-type: [reftest, jstest]
+type: [reftest, jstest, manualtest]
 title: Test Style Guidelines
 
 ---

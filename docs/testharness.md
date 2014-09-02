@@ -1,6 +1,6 @@
 ---
 layout: docs
-type: [jstest]
+type: [writingtests]
 title: Writing Javascript Tests
 
 ---

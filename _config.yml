@@ -37,83 +37,65 @@ open-source:
 docs:
   - icons: settings
     title: Getting Started
-    type: 101
+    type: configuration
     icon_link: /docs/configuration.html
     body: "[Set up your local environment](/docs/configuration.html) for running tests."
-
-  - icons: play
-    title: Running Tests
-    type: 101
-    icon_link: /docs/running_tests.html
-    body: "[Run existing tests](/docs/running_tests.html) or tests you are authoring."
     links:
-
-  - icons: git_pull_request
-    title: Submitting Tests
-    type: 101
-    icon_link: /docs/github-101.html
-    body: "Learn how to
-          [use Git and GitHub](/docs/github-101.html) to contribute."
-    links:
-      - github-101.html
-      - submission-process.html
+      - configuration.html
 
   - icons: pencil
     title: Writing Tests
-    type: 101
-    icon_link: /docs/test-format-guidelines.html
-    body: "Introduction and requirements for [authoring tests](/docs/test-format-guidelines.html)."
-
-  - icons: notes_2
-    title: Javascript Tests
-    type: jstest
-    icon_link: /docs/testharness.html
-    body: "Write [script-based tests](/docs/testharness.html)"
+    type: writingtests
+    icon_link: /docs/writing-tests.html
+    body: "Introduction and requirements for [writing tests](/docs/writing-tests.html)."
     links:
+      - writing-tests.html
+      - test-format-guidelines.html
+      - test-style-guidelines.html
       - testharness.html
-      - test-format-guidelines.html
-      - test-style-guidelines.html
-      - test-templates.html
-  - icons: picture
-    title: Reftests
-    type: reftest
-    icon_link: /docs/reftests.html
-    body: "[Build reftests](/docs/reftests.html) to tests browsers' rendering
-          engines."
-    links:
       - reftests.html
-      - test-format-guidelines.html
-      - test-style-guidelines.html
+      - manual-test.html
       - test-templates.html
-  # - icons: search
-  #   title: Manual Tests
-  #   type: manualtest
-  #   body: "Write tests that require manual interaction"
-  #   icon_link: /
-  #   links:
-  #     - test-format-guidelines.html
-  #     - test-style-guidelines.html
-  #     - test-templates.html
+
+  - icons: play
+    title: Running Tests
+    type: running
+    icon_link: /docs/running_tests.html
+    body: "[Run existing tests](/docs/running_tests.html) or tests you are authoring."
+    links:
+      - running_tests.html
+
+  - icons: git_pull_request
+    title: Submitting Tests
+    type: submitting
+    icon_link: /docs/github-101.html
+    body: "[Submit tests](/docs/submission-process.html) using Git and GitHub."
+    links:
+      - submission-process.html
+      - github-101.html
+
   - icons: search
-    title: Review Tests
+    title: Reviewing Tests
     type: review
     icon_link: /docs/review-process.html
     body: "Learn how to [review tests](/docs/review-process.html)"
     links:
       - review-process.html
       - review-checklist.html
+
   - icons: bug
-    title: Report Bugs
+    title: Reporting Bugs
     type: bugs
     icon_link: /docs/bugs.html
     body: "Guide to writing useful [bug reports](/docs/bugs.html) for specs and browsers."
     links:
       - bugs.html
+
   - icons: circle_question_mark
     title: Unanswered questions?
     type: reference
     icon_link: /docs/faq.html
-    body: "Check our [FAQ](/docs/faq.html) and [glossary](/docs/glossary.html)."
+    body: "Check the [FAQ](/docs/faq.html) and [glossary](/docs/glossary.html)."
     links:
       - faq.html
       - glossary.html

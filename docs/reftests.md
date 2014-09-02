@@ -1,7 +1,7 @@
 ---
 layout: docs
-type: [reftest]
-title: Reftest Documentation
+type: [writingtests]
+title: Writing Reftests
 
 ---
 

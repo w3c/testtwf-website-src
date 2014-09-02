@@ -1,6 +1,6 @@
 ---
 layout: docs
-type: [101]
+type: [running]
 title: Running Tests
 
 ---
