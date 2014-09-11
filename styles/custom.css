@@ -31,7 +31,7 @@
 body {
   background-color: #e7ebf1;
   color: #333;
-  font-family: "Open Sans", "DejaVu Sans", "Adelle", georgia, serif;
+  font-family: "Open Sans","DejaVu Sans","Verdana",sans;
   font-size: 16px;
   line-height: 1.6;
 }
@@ -39,7 +39,7 @@ body {
 code {
   word-break: break-word;
   word-wrap: break-word;
-  font-family:Monaco,Menlo,Consolas,"Open Sans Mono", "DejaVu Sans Mono","Courier New",monospace
+  font-family:Monaco,Menlo,Consolas,"Open Sans Mono","DejaVu Sans Mono","Courier New",monospace
 }
 
 h1, h2, h3 {
@@ -283,6 +283,10 @@ hr.section {
 
 body.index *[role=main] article {
   margin-bottom: 80px;
+}
+
+.jumbotron {
+  font-family: "Adelle", georgia, serif;
 }
 
 *[role=main] .jumbotron h2 {
