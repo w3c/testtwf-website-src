@@ -23,18 +23,34 @@ suitable for any purpose.
 
 ## Build tool
 
-This website is currently built using [GitHub Pages][gh-pages] which itself
-relies on [Jekyll][jekyll]. This automatically transforms the content of this
-repository into a [static website hosted on GitHub][github-io]. We now have the
-[testthewebforward.org domain][testtwf-org] pointing to it.
+This website is [Jekyll][jekyll]. This transforms the source content
+into a set of static HTML pages which can then be served using any
+webserver.
 
-### Running Jekyll locally
+## Deployment in Production
 
-Installing the [same version of Jekyll][install-jekyll] used by GitHub Pages
-along with all of its dependencies is a one liner. From the project's directory,
-just run:
+The production copy of this website is located at
+[testthewebforward.org domain][testtwf-org]. It is hosted on
+[GitHub][github-io]. In order to build the static copy of the website,
+a [travis][travis] script is run on each commit to the master branch. This
+performs the build steps and pushes the result to a second repository
+containing only the output HTML and other assets.
 
-    $  gem install github-pages
+### Testing Changes Locally
+
+Building the tests locally requires [Ruby][ruby] and
+[Ruby Gems][gems]. These are isntalled by default on many systems; if
+they are not present on your system they can be installed using your
+package manager or via the installers downloadable on their websites.
+
+If it not already installed the `bundler` program should then be
+installed using
+
+    $ gen install bundler
+
+The dependencies can then be installed using the `bundle` command:
+
+    $ bundle install
 
 If you are running Xcode 5.1 or over and get the following error when installing,
 
@@ -45,12 +61,17 @@ with the following command. (You may need to do this from a superuser shell.)
 
     $ ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install github-pages
 
-Once installed, launch Jekyll from the command line:
+This will also install `rake`, a `make`-like tool that defines a
+number of targets corresponding to useful operations. To start a local
+server use `rake serve`
 
-    $ jekyll serve --watch
+    $ rake serve
 
-and navigate your browser to `http://localhost:4000`. Modifications to the
-source code get automatically picked-up and displayed on page refresh.
+Once this has finished building, navigate your browser to
+`http://localhost:4000` to see the site.
+
+Modifications to the source code get automatically picked-up and
+displayed on page refresh.
 
 ## Documentation format
 
@@ -63,12 +84,12 @@ bottom of the page. For example (lifted off John Gruber's
 [Markdown Syntax guide][markdown]):
 
     This is [an example][eg] reference-style link.
-    
+
     [...]
-    
+
     Then, anywhere in the document (usually at the end), you define your link
     label like this, on a line by itself:
-    
+
     [eg]: http://example.com/
 
 Favor named referenced over indexed ones, as those make refactoring much
@@ -87,7 +108,7 @@ as described in the [online documentation][jekyll-blog].
 All blog posts must be located in the `_posts` directory and must use the `post`
 template (which should be specified in the [YAML front-matter][front-matter]).
 
-Blog posts can be of three different types. Regular, in depth posts should use the 
+Blog posts can be of three different types. Regular, in depth posts should use the
 `post` type, shorter posts, the `quickpost` type, and `newsletter` posts… the
 `newsletter` type. Types are added using [YAML front-matter][front-matter].
 
@@ -134,7 +155,7 @@ will automatically create the following HTML markup:
 <div class="speakers">
   <h2 id="speakers">专家</h2>
   <div class="media col-md-4">
-    <img class="media-object thumbnail pull-left" width="48" height="48" 
+    <img class="media-object thumbnail pull-left" width="48" height="48"
       src="/assets/experts/rhauck.jpg" alt="Picture of Rebecca Hauck">
     <h4 class="media-heading">Rebecca Hauck</h4>
        <p>Adobe, CSS Working Group</p>
@@ -190,6 +211,7 @@ Thanks for your help!
 [front-matter]: http://jekyllrb.com/docs/frontmatter/
 [event-eg]: https://github.com/w3c/testtwf-website/blob/gh-pages/events/2013/seattle.html#L1-L8
 [fuckyeahmarkdown]: http://fuckyeahmarkdown.com/
+[gems]: https://rubygems.org/
 [gh-pages]: http://pages.github.com/
 [github-io]: http://w3c.github.io/testtwf-website/
 [install-jekyll]: https://help.github.com/articles/using-jekyll-with-pages
@@ -199,7 +221,9 @@ Thanks for your help!
 [markdown]: http://daringfireball.net/projects/markdown/syntax
 [ref-style]: http://daringfireball.net/projects/markdown/syntax#link
 [resources]: https://github.com/w3c/testtwf-website/blob/gh-pages/RESOURCES.md
+[ruby]: https://www.ruby-lang.org/
 [staging]: http://www.testthewebforward-staging.org/
 [templates]: https://github.com/w3c/testtwf-website/blob/gh-pages/_includes
+[travis]: https://travis-ci.org
 [testtwf-org]: http://testthewebforward.org
 [yaml]: http://www.yaml.org/
