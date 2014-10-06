@@ -3,7 +3,7 @@ name: "Test the Web Forward"
 destination: "_site"
 url: "http://testthewebforward.com"
 description: "Home of the Open Web Platform testing effort."
-repo: jgraham.github.io
+repo: testtwf-website
 permalink: /blog/:year/:month/:day/:title.html
 markdown: redcarpet
 paginate: 5

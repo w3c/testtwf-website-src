@@ -9,10 +9,10 @@ require 'rake'
 require 'yaml'
 
 CONFIG = YAML.load(File.read('_config.yml'))
-USERNAME = ENV['GIT_NAME']
 REPO = CONFIG["repo"]
 DESTINATION = CONFIG['destination']
 
+USERNAME = "w3c"
 SOURCE_BRANCH = "master"
 DESTINATION_BRANCH = "master"
 
