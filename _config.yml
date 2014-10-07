@@ -10,11 +10,11 @@ paginate: 5
 paginate_path: "/blog/page-:num"
 open-source:
   -
-    name: testtwf-website
-    url: https://github.com/w3c/testtwf-website
-    guide: https://github.com/w3c/testtwf-website/blob/gh-pages/CONTRIBUTING.md
+    name: testtwf-website-src
+    url: https://github.com/w3c/testtwf-website-src
+    guide: https://github.com/w3c/testtwf-website-src/blob/gh-pages/CONTRIBUTING.md
     license: "[Creative Commons Attribution License (CC-BY 3.0)](https://creativecommons.org/licenses/by/3.0/)"
-    body: "`testtwf-website` contains the source code of this very website which
+    body: "`testtwf-website-src` contains the source code of this very website which
           includes all documentation pertaining to the Open Web Platform testing
           effort."
   -
