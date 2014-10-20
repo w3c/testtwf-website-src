@@ -15,7 +15,7 @@ Everything you need to know to write good tests.
 * [Writing Javascript Tests](testharness.html) - Documentation for
   writing script-based tests.
 
-* [Writing RefTests](reftests.html) - Documentation for
+* [Writing Reftests](reftests.html) - Documentation for
   writing layout reftests.
 
 * [Writing Manual Tests](manual-test.html) - Documentation for writing
