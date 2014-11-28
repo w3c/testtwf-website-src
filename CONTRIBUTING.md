@@ -39,7 +39,7 @@ containing only the output HTML and other assets.
 ### Testing Changes Locally
 
 Building the tests locally requires [Ruby][ruby] and
-[Ruby Gems][gems]. These are isntalled by default on many systems; if
+[Ruby Gems][gems]. These are installed by default on many systems; if
 they are not present on your system they can be installed using your
 package manager or via the installers downloadable on their websites.
 
