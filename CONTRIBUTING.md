@@ -46,7 +46,7 @@ package manager or via the installers downloadable on their websites.
 If it not already installed the `bundler` program should then be
 installed using
 
-    $ gen install bundler
+    $ gem install bundler
 
 The dependencies can then be installed using the `bundle` command:
 
