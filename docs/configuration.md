@@ -5,4 +5,4 @@ title: Getting Started
 
 ---
 
-{% render_partial _resources/web-platform-tests/docs/reftests.md %}
+{% render_partial _resources/web-platform-tests/docs/github-101.md %}
