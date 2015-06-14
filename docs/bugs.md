@@ -118,13 +118,12 @@ You need to go to vendor's bug reporting website to report a bug of browser.
 * [Chrome Bugs][3]
 * [Opera Bug Report Wizard][4]
 * [IE Bugs][5]
-
-* Other browsers - please check vendor's website for bug reporting
-information
+* [Apple Bug Reporter][6] (Safari)
+* Other browsers - please check vendor's website for bug reporting information
 
 ## Where to Report a Bug of W3C Specification
 
-If the bug is related to W3C specification, you need to go to [W3C Bugzilla][6]
+If the bug is related to W3C specification, you need to go to [W3C Bugzilla][7]
 to report this bug.
 
 ## Where to Report a Bug of a Test Itself
@@ -136,4 +135,5 @@ You need to follow Github's normal workflow and use "issues" to report a bug of 
 [3]: http://crbug.com
 [4]: https://bugs.opera.com/wizard/
 [5]: http://connect.microsoft.com/IE
-[6]: https://www.w3.org/Bugs/Public/
+[6]: https://bugreport.apple.com
+[7]: https://www.w3.org/Bugs/Public/
