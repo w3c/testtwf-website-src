@@ -121,10 +121,14 @@ You need to go to vendor's bug reporting website to report a bug of browser.
 * [Apple Bug Reporter][6] (Safari)
 * Other browsers - please check vendor's website for bug reporting information
 
-## Where to Report a Bug of W3C Specification
+## Where to Report a Spec Issue/Bug
 
-If the bug is related to W3C specification, you need to go to [W3C Bugzilla][7]
-to report this bug.
+Somewhere in the beginning part of any spec, you should be able to find a
+link for reporting any problems in the spec. Look for a link with text such
+as *new issue*, *new bug*, *file an issue*, or *report a bug*; or in the
+case of some W3C specs, the text *If you wish to make comments regarding
+this document, please send them to* followed by an e-mail address for
+sending a message to a mailing list for a particular W3C working group.
 
 ## Where to Report a Bug of a Test Itself
 
