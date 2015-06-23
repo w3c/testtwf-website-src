@@ -63,8 +63,22 @@ task :submodule_update do
   end
 end
 
+desc "Escape double braces in upstream markdown sources"
+task :escape_braces do
+  file_names = [
+    '_resources/web-platform-tests/docs/lint-tool.md',
+    '_resources/web-platform-tests/docs/test-format-guidelines.md',
+  ]
+  file_names.each do |file_name|
+    file_contents = File.read(file_name)
+    file_contents = file_contents.gsub(/{{/, "{% raw %}{{")
+    file_contents = file_contents.gsub(/}}/, "}}{% endraw %}")
+    File.open(file_name, "w") {|file| file.puts file_contents }
+  end
+end
+
 desc "Generate the site"
-task :build do
+task :build => :escape_braces do
   jekyll "build"
 end
 
