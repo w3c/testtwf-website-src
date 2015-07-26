@@ -54,8 +54,8 @@ docs:
       - testharness.html
       - reftests.html
       - manual-test.html
-      - css-naming.md
-      - css-metadata.md
+      - css-naming.html
+      - css-metadata.html
       - test-templates.html
 
   - icons: play
