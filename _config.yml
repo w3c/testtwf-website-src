@@ -46,9 +46,10 @@ docs:
     title: Writing Tests
     type: writingtests
     icon_link: /docs/writing-tests.html
-    body: "Introduction and requirements for [writing tests](/docs/writing-tests.html)."
+    body: "Introduction and requirements for [writing tests](/docs/writing-tests.html) and [find a test to write](/docs/bugs/index.html)"
     links:
       - writing-tests.html
+      - bugs/index.html
       - test-format-guidelines.html
       - test-style-guidelines.html
       - testharness.html

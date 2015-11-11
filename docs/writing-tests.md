@@ -9,6 +9,8 @@ Everything you need to know to write good tests.
 
 * [Test Format Guidelines](test-format-guidelines.html) - Requirements for writing tests.
 
+* [web-platform-tests bugs](bugs/index.html) - Good bugs for new contributors to work on.
+
 * [Test Style Guidelines](test-style-guidelines.html) - Style guide
   for tests.
 
