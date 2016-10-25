@@ -23,5 +23,7 @@ Everything you need to know to write good tests.
 * [Writing Manual Tests](manual-test.html) - Documentation for writing
   manual tests.
 
+* [Lint tool](lint-tool.html) - Documentation for the lint tool.
+
 * [Test Templates](test-templates.html) - Templates for both reftests
   and script-based tests.

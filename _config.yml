@@ -57,6 +57,7 @@ docs:
       - manual-test.html
       - css-naming.html
       - css-metadata.html
+      - lint-tool.html
       - test-templates.html
 
   - icons: play
