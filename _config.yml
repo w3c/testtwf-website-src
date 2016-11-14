@@ -1,4 +1,4 @@
-exclude: [RESOURCES.md, CONTRIBUTING.md, README.md, vendor]
+exclude: [RESOURCES.md, CONTRIBUTING.md, README.md, vendor/bundle]
 name: "Test the Web Forward"
 destination: "_site"
 url: "http://testthewebforward.com"
