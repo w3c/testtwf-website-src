@@ -24,7 +24,7 @@ open-source:
     license: "[W3C Test Suite License](http://www.w3.org/Consortium/Legal/2008/04-testsuite-license.html)"
     body: "`web-platform-tests` is the main test repository for the Open Web
           Platform. It contains all the existing test suites for Open Web Platform
-          sepecifications excpet for those of the CSS Working Group."
+          specifications except for those of the CSS Working Group."
   -
     name: testharness.js
     url: https://github.com/w3c/testharness.js
