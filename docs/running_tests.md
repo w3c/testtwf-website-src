@@ -1,8 +1,4 @@
 ---
-layout: docs
-type: [running]
-title: Running Tests
-
+layout: redirect
+redirect_url: http://web-platform-tests.org/running-tests/
 ---
-
-{% render_partial _resources/web-platform-tests/docs/running_tests.md %}

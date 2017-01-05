@@ -1,7 +1,4 @@
 ---
-layout: docs
-type: [review]
-title: Test Review Checklist
+layout: redirect
+redirect_url: http://web-platform-tests.org/reviewing-tests/checklist.html
 ---
-
-{% render_partial _resources/web-platform-tests/docs/review-checklist.md %}

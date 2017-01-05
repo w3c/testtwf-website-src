@@ -1,8 +1,4 @@
 ---
-layout: docs
-type: [writingtests]
-title: Test Templates
-
+layout: redirect
+redirect_url: http://web-platform-tests.org/appendix/test-templates.html
 ---
-
-{% render_partial _resources/web-platform-tests/docs/test-templates.md %}

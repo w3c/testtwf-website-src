@@ -1,8 +1,4 @@
 ---
-layout: docs
-type: [reftest, jstest]
-title: CSS Metadata
-
+layout: redirect
+redirect_url: http://web-platform-tests.org/writing-tests/css-metadata.html
 ---
-
-{% render_partial _resources/web-platform-tests/docs/css-metadata.md %}

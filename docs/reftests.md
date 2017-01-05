@@ -1,8 +1,4 @@
 ---
-layout: docs
-type: [writingtests]
-title: Writing Reftests
-
+layout: redirect
+redirect_url: http://web-platform-tests.org/writing-tests/reftest.html
 ---
-
-{% render_partial _resources/web-platform-tests/docs/reftests.md %}

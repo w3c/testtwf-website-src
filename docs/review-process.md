@@ -1,8 +1,4 @@
 ---
-layout: docs
-type: [review]
-title: Test Review and Approval Process
-
+layout: redirect
+redirect_url: http://web-platform-tests.org/reviewing-tests/
 ---
-
-{% render_partial _resources/web-platform-tests/docs/review-process.md %}

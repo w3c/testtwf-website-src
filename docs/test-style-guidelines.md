@@ -1,8 +1,4 @@
 ---
-layout: docs
-type: [reftest, jstest, manualtest]
-title: Test Style Guidelines
-
+layout: redirect
+redirect_url: http://web-platform-tests.org/
 ---
-
-{% render_partial _resources/web-platform-tests/docs/test-style-guidelines.md %}

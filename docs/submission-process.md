@@ -1,8 +1,4 @@
 ---
-layout: docs
-type: [submitting]
-title: Test Submission Process
+layout: redirect
+redirect_url: http://web-platform-tests.org/writing-tests/submission-process.html
 ---
-
-{% render_partial _resources/web-platform-tests/docs/submission-process.md %}
-

@@ -1,8 +1,4 @@
 ---
-layout: docs
-type: [reftest, jstest]
-title: User Stylesheets
-
+layout: redirect
+redirect_url: http://web-platform-tests.org/writing-tests/css-user-styles.html
 ---
-
-{% render_partial _resources/web-platform-tests/docs/css-user-styles.md %}

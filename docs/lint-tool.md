@@ -1,8 +1,4 @@
 ---
-layout: docs
-type: [writingtests]
-title: Lint tool
-
+layout: redirect
+redirect_url: http://web-platform-tests.org/writing-tests/lint-tool.html
 ---
-
-{% render_partial _resources/web-platform-tests/docs/lint-tool.md %}

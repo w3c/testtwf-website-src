@@ -1,8 +1,4 @@
 ---
-layout: docs
-type: [reftest, jstest]
-title: CSS Naming Guidelines
-
+layout: redirect
+redirect_url: http://web-platform-tests.org/writing-tests/general-guidelines.html#file-paths-and-names
 ---
-
-{% render_partial _resources/web-platform-tests/docs/css-naming.md %}

@@ -1,8 +1,4 @@
 ---
-layout: docs
-type: [submission]
-title: Github Test Submission
-
+layout: redirect
+redirect_url: http://web-platform-tests.org/appendix/github-intro.html
 ---
-
-{% render_partial _resources/web-platform-tests/docs/github-101.md %}
