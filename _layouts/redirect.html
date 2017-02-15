@@ -1,12 +1,18 @@
+{% assign first_char = page.redirect_url | slice 0 %}
+{% if first_char == "/") %}
+{% capture to_url %}{{ site.url }}{{ page.redirect_url }}{% endcapture %}
+{% else %}
+{% assign to_url = page.redirect_url %}
+{% endif %}
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Redirecting to {{ site.url }}{{ page.redirect_url }}</title>
-  <meta http-equiv="refresh" content="0;URL='{{ site.url }}{{ page.redirect_url }}'">
+  <title>Redirecting to {{ to_url }}</title>
+  <meta http-equiv="refresh" content="0;URL={{ to_url }}">
   </head>
 
   <body>
-    <p>You should be redirected immediately to: <a href="{{ site.url }}{{ page.redirect_url }}">{{ site.url }}{{ page.redirect_url }}</a>.</p>
-    <p>If you are not redirected, click <a href="{{ site.url }}{{ page.redirect_url }}">here</a>.</p>
+    <p>You should be redirected immediately to: <a href="{{ to_url }}">{{ to_url }}</a>.</p>
+    <p>If you are not redirected, click <a href="{{ to_url }}">here</a>.</p>
   </body>
 </html>
