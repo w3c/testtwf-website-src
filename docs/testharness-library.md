@@ -1,7 +1,4 @@
 ---
-layout: docs
-type: [jstest]
-title: Testharness.js API Documentation
+layout: redirect
+redirect_url: http://web-platform-tests.org/writing-tests/testharness-api.html
 ---
-
-{% render_partial _resources/testharness.js/docs/api.md %}

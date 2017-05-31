@@ -1,7 +1,4 @@
 ---
-layout: docs
-type: [jstest]
-title: Writing idlharness.js Tests
+layout: redirect
+redirect_url: http://web-platform-tests.org/writing-tests/idlharness.html
 ---
-
-{% render_partial _resources/testharness.js/docs/idlharness.md %}
